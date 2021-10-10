@@ -60,7 +60,7 @@ module.exports = welcome = async (ikyy, anu) => {
 
           contentText: `${teks}`,
 
-          footerText: " ",
+          footerText: "WannBotz~",
 
           imageMessage: imageMsg,
 
@@ -118,7 +118,7 @@ module.exports = welcome = async (ikyy, anu) => {
 
           contentText: `${out}`,
 
-          footerText: " ",
+          footerText: "WannBotz~",
 
           imageMessage: imageMsg,
 
