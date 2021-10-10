@@ -48,7 +48,7 @@ const starts = async (ikyy = new WAConnection()) => {
 
 	ikyy.logger.level = 'warn'
 
-	console.log(color(figlet.textSync('بيسم الله', {
+	console.log(color(figlet.textSync('MANUT GUSTI', {
 
 		font: 'Standard',
 
