@@ -1,4 +1,4 @@
-﻿const { 
+const { 
   WAConnection: _WAConnection,
   MessageType,
   Presence,
@@ -4980,49 +4980,6 @@ reply(mess.success)
  reply(mess.wrongFormat)
   }
   break
-  case 'listdmff':
-              gopeynya = `Halo Kak ${pushname} Berikut List Diamond FF 
-  
-┏━━⬣ VIA ID
-┃20 💎  2.900
-┃50 💎 7.000
-┃70 💎 10.000
-┃100💎 13.800
-┃140💎18.900
-┃210💎28.900
-┃355💎 47.000
-┃500💎66.500
-┃720💎93.500
-┗━━⬣
-
-┏━━⬣ VILOG
-┃200💎:23.500
-┃310💎:34.500
-┃410💎:44.200
-┃520💎:56.500
-┃620💎:68.000
-┃720💎:77.500
-┃830💎:89.000
-┗━━⬣
-  ┏━━⬣ LIST SEWA BOT
-  ┃⬡ SEWA 4K/MINGGU
-  ┃⬡ SEWA 10K/MANEN
-  ┃⬡ SEWA + PREMIUM 15K
-  ┃⬡ JADI OWNER BOT 20K
-  ┃⬡ JADI OWNER BOT + FITUR STORE 30K
-  ┃⬡ MINAT? wa.me/6285640068416
-  ┗━━⬣
-
-
-┏━━⬣ MEMBERSHIP VIA ID
-┃⬡ MM 27.500
-┃⬡ MB 138.580
-┗━━⬣
-`
-buff = `${week} ${date}
-${timuu} WIB`
-  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{ buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 },{ buttonId: noprefix ? "sewabot" : "!"+"sewabot", buttonText: { displayText: '🏷️ SEWA BOT' } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-              break
   case 'premiumcheck':
   case 'cekpremium': 
   if (!isPremium) return sendButMessage (from, prem1, prem2, prem3, { quoted: freply})
@@ -5067,7 +5024,7 @@ ${timuu} WIB`
   ┃⬡ https://instabio.cc/wannstore
   ┗━━⬣
   `
-  buttons = [{buttonId: noprefix ? "owner" : "!"+"owner",buttonText:{displayText: `OWNER`},type:1},{buttonId: `{buttonId: noprefix ? "payment" : "!"+"payment",buttonText:{displayText: `PAYMENT`},type:1}]
+  buttons = [{buttonId: noprefix ? "owner" : "!"+"owner",buttonText:{displayText: `OWNER`},type:1},{buttonId: noprefix ? "payment" : "!"+"payment",buttonText:{displayText: `PAYMENT`},type:1}]
   imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
   buttonsMessage = {footerText:'follow @achyrr_wann', imageMessage: imageMsg,
   contentText: teksnya,buttons,headerType:4}
@@ -5085,7 +5042,7 @@ ${timuu} WIB`
 
   NOTE* JANGAN LUPA KIRIM BUKTI TRANSFER KEPADA OWNER!
   `
-  buttons = [{ buttonId: noprefix ? "bukti" : "!"+"bukti", buttonText: { displayText: 'KIRIM BUKTI TF' }, type: 1 },{ buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: '🏷️ PAYMENT LAIN' }]
+  buttons = [{buttonId: noprefix ? "bukti" : "!"+"bukti",buttonText:{displayText: `KIRIM BUKTI TF`},type:1},{buttonId: noprefix ? "payment" : "!"+"payment",buttonText:{displayText: `PAYMENT LAIN`},type:1}]
   imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
   buttonsMessage = {footerText:'follow @achyrr_wann', imageMessage: imageMsg,
   contentText: teksnya,buttons,headerType:4}
@@ -5105,7 +5062,7 @@ ${timuu} WIB`
   Link Pembayaran: https://instabio.cc/wannstore 
 
   NOTE* JANGAN LUPA KIRIM BUKTI TRANSFER KEPADA OWNER!`
-  buttons = [{ buttonId: noprefix ? "bukti" : "!"+"bukti", buttonText: { displayText: 'KIRIM BUKTI TF' }, type: 1 },{ buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: '🏷️ PAYMENT LAIN' }]
+  buttons = [{buttonId: noprefix ? "bukti" : "!"+"bukti",buttonText:{displayText: `KIRIM BUKTI TF`},type:1},{buttonId: noprefix ? "payment" : "!"+"payment",buttonText:{displayText: `PAYMENT LAIN`},type:1}]
   imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
   buttonsMessage = {footerText:'follow @achyrr_wann', imageMessage: imageMsg,
   contentText: teksnya,buttons,headerType:4}
@@ -5138,8 +5095,43 @@ groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
 
 
 
- ikyy.sendMessage(from, { contentText: `${menu}`, footerText: 'Wann Store', buttons: [{ buttonId: noprefix ? "bukti" : "!"+"bukti", buttonText: { displayText: 'KIRIM BUKTI TF' }, type: 1 },{ buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: '🏷️ PAYMENT LAIN' }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: 'Wann Store', buttons: [{ buttonId: `${prefix}bukti`, buttonText: { displayText: 'KIRIM BUKTI TF' }, type: 1 },{ buttonId: `${prefix}payment`, buttonText: { displayText: 'GANTI PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
  break
+ case 'listdmff':
+              gopeynya = `${qris}`
+  buff = await getBuffer(gopeynya)
+  teksnya = `
+┏━━⬣ VIA ID
+┃20 💎  2.900
+┃50 💎 7.000
+┃70 💎 10.000
+┃100💎 13.800
+┃140💎18.900
+┃210💎28.900
+┃355💎 47.000
+┃500💎66.500
+┃720💎93.500
+┗━━⬣
+
+┏━━⬣ VILOG
+┃200💎:23.500
+┃310💎:34.500
+┃410💎:44.200
+┃520💎:56.500
+┃620💎:68.000
+┃720💎:77.500
+┃830💎:89.000
+┗━━⬣
+
+┏━━⬣ MEMBERSHIP VIA ID
+┃⬡ MM 27.500
+┃⬡ MB 138.580
+┗━━⬣
+`
+buff = `${week} ${date}
+${timuu} WIB`
+  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "owner" : "!"+"owner",buttonText: { displayText: 'OWNER' }, type: 1 },{buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+              break
  case 'bukti':
  titid = `
  hai kak ${pushname}
@@ -5156,22 +5148,20 @@ groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
   type: 1,
 },]);
  break;
- 
-
- case 'payment':
- gopeynya = `Halo Kak ${pushname} Berikut List Pembayarannya.silahkan Pilih Dibawah Ini
-  
+ case 'listdmff':
+              gopeynya = `${qris}`
+  buff = await getBuffer(gopeynya)
+  teksnya = `
 ┏━━⬣ VIA ID
 ┃💸GOPAY
 ┃💸DANA
-┃💸QRIS
+┃💸OVO
 ┃BELUM PREMIUM? ADA QRIS ALL PAY
 
 `
 buff = `${week} ${date}
 ${timuu} WIB`
-  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{ buttonId: noprefix ? "gopay" : "!"+"gopay", buttonText: { displayText: 'BAYAR DENGAN GOPAY' }, type: 1 },{ { buttonId: noprefix ? "dana" : "!"+"dana",, buttonText: { displayText: 'BAYAR DENGAN DANA' }, type: 1 }, {buttonId: noprefix ? "allpay" : "!"+"allpay", buttonText: { displayText: 'BAYAR DENGAN QRIS ALL PAY' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
+  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "owner" : "!"+"owner", buttonText: { displayText: 'OWNER' }, type: 1 },{buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 }, {buttonId: noprefix ? "sewabot" : "!"+"sewabot",buttonText: { displayText: 'SEWA BOT' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 
 case 'inibug':
 list = await ikyy.prepareMessageFromContent(from, {
@@ -5186,19 +5176,22 @@ list = await ikyy.prepareMessageFromContent(from, {
   "title": "LIST CATALOG",
   "products": [
   {
- "productId": "4120139628109348"
+ "productId": "4384164685029627"
   },
   {
-"productId": "6431678466857362"
+"productId": "4514395141953296"
  },
  {
-"productId": "4392524570816732"
- }
+"productId": "3830565277044274"
+ },
+   {
+"productId": "6596446863706523"
+ },
  ]
   }
   ],
   "headerImage": {
-"productId": "4120139628109348",
+"productId": "4384164685029627",
 "jpegThumbnail": fakeimage
  },
  "businessOwnerJid": sender
@@ -5222,22 +5215,26 @@ list = await ikyy.prepareMessageFromContent(from, {
 {
   "title": "LIST HARGA",
   "products": [
+    {
+ "productId": "4384164685029627"
+  },
   {
-"productId": "4120139628109348"
+"productId": "4514395141953296"
  },
  {
-"productId": "6431678466857362"
+"productId": "4514395141953296"
  },
- {
-"productId": "4392524570816732"
- }
+  {
+"productId": "6596446863706523"
+ },
  ]
   }
   ],
   "headerImage": {
-"productId": "4120139628109348",
-"productId": "6431678466857362",
-"productId": "4392524570816732",
+"productId": "4384164685029627",
+"productId": "4514395141953296",
+"productId": "4514395141953296",
+"productId": "6596446863706523",
 "jpegThumbnail": fakeimage
  },
  "businessOwnerJid": sender
@@ -8128,6 +8125,5 @@ console.log('Message : %s', color(e, 'cyan'))
  }
   }
 }
-
 
 
