@@ -5032,6 +5032,24 @@ reply(mess.success)
   ikyy.relayWAMessage(prep)
   break
   case 'gopay':
+  gopeynya = `https://telegra.ph/file/9813951fe94db331b507c.jpg`
+  buff = await getBuffer(gopeynya)
+  teksnya =`
+  Hai kak ${pushname}
+
+  Silahkan scan kode pembayaran di atas sesuai nominal!
+  AN: WANNOFFICIAL03
+
+  NOTE* JANGAN LUPA KIRIM BUKTI TRANSFER KEPADA OWNER!
+  `
+  buttons = [{buttonId: noprefix ? "bukti" : "!"+"bukti",buttonText:{displayText: `KIRIM BUKTI TF`},type:1},{buttonId: noprefix ? "payment" : "!"+"payment",buttonText:{displayText: `PAYMENT LAIN`},type:1}]
+  imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+  buttonsMessage = {footerText:'follow @achyrr_wann', imageMessage: imageMsg,
+  contentText: teksnya,buttons,headerType:4}
+  prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
+  ikyy.relayWAMessage(prep)
+  break
+  case 'gopay':
   gopeynya = `${qris}`
   buff = await getBuffer(gopeynya)
   teksnya =`
@@ -5147,19 +5165,17 @@ ${time2} WIB`
 },]);
  break;
  case 'payment':
-              gopeynya = `${qris}`
-  buff = await getBuffer(gopeynya)
-  teksnya = `
+              gopeynya =  `
+BERIKUT INI ADALAH LIST PEMBAYARAN KAMI
 ┏━━⬣ VIA ID
 ┃💸GOPAY
 ┃💸DANA
-┃💸OVO
 ┃BELUM PREMIUM? ADA QRIS ALL PAY
-
+┗━━⬣
 `
 buff = `${week} ${date}
 ${time2} WIB`
-  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "owner" : "!"+"owner", buttonText: { displayText: 'OWNER' }, type: 1 },{buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 }, {buttonId: noprefix ? "sewabot" : "!"+"sewabot",buttonText: { displayText: 'SEWA BOT' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "gopay" : "!"+"gopay", buttonText: { displayText: 'BAYAR DENGAN GOPAY' }, type: 1 },{buttonId: noprefix ? "dana" : "!"+"dana", buttonText: { displayText: 'BAYAR DENGAN DANA' }, type: 1 }, {buttonId: noprefix ? "scan" : "!"+"scan",buttonText: { displayText: 'KATALOG OWNER' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 
 case 'inibug':
 list = await ikyy.prepareMessageFromContent(from, {
