@@ -5129,7 +5129,7 @@ groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
 ┗━━⬣
 `
 buff = `${week} ${date}
-${timuu} WIB`
+${time2} WIB`
   ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "owner" : "!"+"owner",buttonText: { displayText: 'OWNER' }, type: 1 },{buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
  case 'bukti':
@@ -5148,7 +5148,7 @@ ${timuu} WIB`
   type: 1,
 },]);
  break;
- case 'listdmff':
+ case 'payment':
               gopeynya = `${qris}`
   buff = await getBuffer(gopeynya)
   teksnya = `
@@ -5160,7 +5160,7 @@ ${timuu} WIB`
 
 `
 buff = `${week} ${date}
-${timuu} WIB`
+${time2} WIB`
   ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: noprefix ? "owner" : "!"+"owner", buttonText: { displayText: 'OWNER' }, type: 1 },{buttonId: noprefix ? "payment" : "!"+"payment", buttonText: { displayText: 'PAYMENT' }, type: 1 }, {buttonId: noprefix ? "sewabot" : "!"+"sewabot",buttonText: { displayText: 'SEWA BOT' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 
 case 'inibug':
