@@ -5098,9 +5098,7 @@ groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
  ikyy.sendMessage(from, { contentText: `${menu}`, footerText: 'Wann Store', buttons: [{ buttonId: `${prefix}bukti`, buttonText: { displayText: 'KIRIM BUKTI TF' }, type: 1 },{ buttonId: `${prefix}payment`, buttonText: { displayText: 'GANTI PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
  break
  case 'listdmff':
-              gopeynya = `${qris}`
-  buff = await getBuffer(gopeynya)
-  teksnya = `
+              gopeynya = ` BERIKUT ADALAH LIST DIAMOND FF
 ┏━━⬣ VIA ID
 ┃20 💎  2.900
 ┃50 💎 7.000
