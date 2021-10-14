@@ -1,1 +1,291 @@
-"use strict";const {	MessageType,	Presence} = require("@adiwajshing/baileys");const fs = require("fs");const PhoneNumber = require('awesome-phonenumber')const { getBuffer, sleep } = require("../lib/myfunc");let setting = JSON.parse(fs.readFileSync('./setting.json'));let { botName } = settingmodule.exports = async(ikyy, anj, welcome) => {    const isWelcome = welkom.includes(anu.jid)    const mdata = await ikyy.groupMetadata(anj.jid)    const groupName = mdata.subject    const conts = ikyy.contacts[anj.participants[0]] || { notify: anj.jid.replace(/@.+/, '') }	const pushname = conts.notify || conts.vname || conts.name || PhoneNumber('+' + anj.participants[0].replace('@s.whatsapp.net', '')).getNumber('international')    if (anj.action === 'add'){        if (anj.participants[0] === ikyy.user.jid){            await sleep(5000)            ikyy.updatePresence(anj.jid, Presence.composing)            ikyy.sendMessage(anj.jid, `Hai aku ${botName}, silahkan kirim #menu`, MessageType.text)        } else if (isWelcome){            try {                var pic = await ikyy.getProfilePicture(anj.participants[0])            } catch {                var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'            }                ikyy.sendButtonsLoc(anj.jid, `Hai @${anj.participants[0].split("@")[0]}, selamat datang di ${groupName}`,`Welcome Messages by ${botName}`, [{"buttonId": `#menu`,"buttonText": {"displayText": "Menu Bot"},"type": "RESPONSE"},{"buttonId": `#rules`,"buttonText": {"displayText": "Rules Bot"},"type": "RESPONSE"},{"buttonId": `#welcome disable`,"buttonText": {"displayText": "Disable Welcome Messages"},"type": "RESPONSE"}], await getBuffer(pic), [anj.participants[0]])        }    } else if (anj.action === 'remove' && isWelcome){        try {            var pic = await ikyy.getProfilePicture(anj.participants[0])        } catch {            var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'        }        await ikyy.sendButtonsLoc(anj.jid, `Sayonara @${anj.participants[0].split("@")[0]}`,`Leave Messages by ${botName}`, [{"buttonId": `#welcome disable`,"buttonText": {"displayText": "Disable Leave Messages"},"type": "RESPONSE"}], await getBuffer(pic), [anj.participants[0]])    } else if (anj.action == 'promote') {       try {            var pic = await ikyy.getProfilePicture(anj.participants[0])        } catch {            var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'        }    	var teks = `*◪* *PROMOTE DETECT*\n*├─* *Nomor:* ${anj.participants[0].split("@")[0]}\n*└─ ❏* *@${anj.participants[0].split("@")[0]}*`        var ini_img = await getBuffer(pic)    	ikyy.sendMessage(anj.jid, ini_img, MessageType.image, { caption: teks, contextInfo: {"mentionedJid": [anj.participants[0]]}})    } else if (anj.action == 'demote') {       try {            var pic = await ikyy.getProfilePicture(anj.participants[0])        } catch {            var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'        }        var teks = `*◪* *DEMOTE DETECT*\n*├─* *Nomor:* ${anj.participants[0].split("@")[0]}\n*└─ ❏* *@${anj.participants[0].split("@")[0]}*`        var ini_img = await getBuffer(pic)	    ikyy.sendMessage(anj.jid, ini_img, MessageType.image, { caption: teks, contextInfo: {"mentionedJid": [anj.participants[0]]}})    }}
+const {
+
+	MessageType
+
+} = require("@adiwajshing/baileys");
+
+const fs = require("fs-extra")
+
+
+
+const { getBuffer } = require('../lib/myfunc')
+
+const { color, bgcolor } = require('../lib/color')
+
+jowin = '\`\`\`New Member\`\`\` \n \`\`\`Nama :\`\`\` \n \`\`\`Askot : \`\`\` \n \`\`\`Umur :\`\`\` \n \`\`\`Status :\`\`\` \n\n - [   ] -'
+
+leave = '\`\`\`Sayonaraa\`\`\`'
+
+
+
+jooin = `${jowin}`
+
+let setting = JSON.parse(fs.readFileSync('./setting.json'))
+
+
+
+module.exports = welcome = async (ikyy, anu) => {
+
+	    const welkom = JSON.parse(fs.readFileSync('./database/group/welcome.json'))
+
+	    const isWelcome = welkom.includes(anu.jid)
+
+	    if (!isWelcome) return
+
+		try {
+
+			    mem = anu.participants[0]
+
+			    console.log(anu)
+
+                try {
+
+                pp_user = await ikyy.getProfilePicture(mem)
+
+                } catch (e) {
+
+                pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+
+            }
+
+                try {
+
+                pp_grup = await ikyy.getProfilePicture(anu.jid)
+
+                } catch (e) {
+
+                pp_grup = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+
+            }
+
+            if (anu.action == 'add' && mem.includes(ikyy.user.jid)) {
+
+            ikyy.sendMessage(anu.jid, 'Halo! Terima Kasih sudah Mengundangku, Jika ingin Menggunakan Bot Ketik !menu', 'conversation')
+
+            }
+
+             if (anu.action == 'add' && !mem.includes(ikyy.user.jid)) {
+
+             if (!welkom.includes(anu.jid)) return
+
+                mdata = await ikyy.groupMetadata(anu.jid)
+
+           
+
+                memeg = mdata.participants.length
+
+            	num = anu.participants[0]
+
+                let v = ikyy.contacts[num] || { notify: num.replace(/@.+/, '') }
+
+                anu_user = v.vname || v.notify || num.split('@')[0]
+
+            buff = await getBuffer(pp_user)
+
+        buttons = [
+
+
+
+          { buttonId: `!selamatdatang`, buttonText: { displayText: "Welcome" }, type: 1 },
+
+
+
+        ];
+
+
+
+        imageMsg = (
+
+
+
+          await ikyy.prepareMessageMedia(buff, "imageMessage", {
+
+
+
+            thumbnail: buff,
+
+
+
+          })
+
+
+
+        ).imageMessage;
+
+
+
+        buttonsMessage = {
+
+
+
+          contentText: `${jooin}`,
+
+
+
+          footerText: "WannBotz~",
+
+
+
+          imageMessage: imageMsg,
+
+
+
+          buttons: buttons,
+
+
+
+          headerType: 4,
+
+
+
+        };
+
+
+
+        prep = await ikyy.prepareMessageFromContent(
+
+
+
+          mdata.id,
+
+
+
+          { buttonsMessage },
+
+
+
+          {}
+
+
+
+        );
+
+
+
+        ikyy.relayWAMessage(prep);
+
+
+
+      }
+
+
+
+      if (anu.action == "remove" && !mem.includes(ikyy.user.jid)) {
+
+
+
+        mdata = await ikyy.groupMetadata(anu.jid);
+
+
+
+        num = anu.participants[0];
+
+
+
+        let w = ikyy.contacts[num] || { notify: num.replace(/@.+/, "") };
+
+
+
+        anu_user = w.vname || w.notify || num.split("@")[0];
+
+
+
+        memeg = mdata.participants.length;
+
+
+
+        out = `${leave}`;
+
+
+
+        buff = await getBuffer(pp_user)
+
+            
+
+        buttons = [
+
+
+
+          { buttonId: `!bay`, buttonText: { displayText: "Sayonara" }, type: 1 },];
+
+
+
+        imageMsg = (
+
+
+
+          await ikyy.prepareMessageMedia(buff, "imageMessage", {
+
+
+
+            thumbnail: buff,
+
+
+
+          })
+
+
+
+        ).imageMessage;
+
+
+
+        buttonsMessage = {
+
+
+
+          contentText: `${out}`,
+
+
+
+          footerText: "WannBotz~",
+
+
+
+          imageMessage: imageMsg,
+
+
+
+          buttons: buttons,
+
+
+
+          headerType: 4,
+
+
+
+        };
+
+
+
+        prep = await ikyy.prepareMessageFromContent(
+
+
+
+          mdata.id,
+
+
+
+          { buttonsMessage },
+
+
+
+          {}
+
+
+
+        );
+
+
+
+        ikyy.relayWAMessage(prep);
+
+        }
+
+		} catch (e) {
+
+			console.log('Error : %s', color(e, 'red'))
+
+		}
+
+	}
