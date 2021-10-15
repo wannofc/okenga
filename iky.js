@@ -73,9 +73,19 @@ let fakeimage = fs.readFileSync("./media/wpmobile.png")
 let errorImg = 'https://i.ibb.co/FBm52Pt/1e0fe6a08b67.jpg'
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 
+
+banChats = true;
+
 owner = setting.owner
+
+ownerNumber = setting.ownerNumber
+
 gamewaktu = setting.gamewaktu
-faketoko = "KENZYBOTZ"
+
+ppbot = setting.ppbot
+
+qris = setting.qris
+
 
 // Database
 const setiker = JSON.parse(fs.readFileSync('./src/stik.json'))
@@ -353,6 +363,32 @@ fakelink = (tekslink) => {
         function randomNomor(angka){
             return Math.floor(Math.random() * angka) + 1
         }
+function clockString(ms) {
+
+      let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
+
+      let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
+
+      let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
+
+      return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
+
+    }           
+
+		    let settingstatus = 0;
+
+    if (new Date() * 1 - settingstatus > 1000) {
+
+      let _uptime = process.uptime() * 1000;
+
+      let uptimer = clockString(_uptime);
+
+      await ikyy.setStatus(`I'm ${botName} | Runtime ${runtime(process.uptime())}⏰ | My Owner ${ownerName}`).catch((_) => _);
+
+      settingstatus = new Date() * 1;
+
+    }
+
         const reply = (teks) => {
 	      ikyy.sendMessage(from, teks, text, {quoted:mek, thumbnail: fakeimage})
         }
