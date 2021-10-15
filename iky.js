@@ -987,7 +987,6 @@ ikyy.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 ┏━━⬣ *YOUR INFO*
 ┃⬡ Name : ${sender.split('@')[0]}
 ┃⬡ Sender : *@${sender.split('@')[0]}*
-┃⬡ Bio Info : *${thu.status}*
 ┗━━⬣
 
 ┏━━⬣ *📝 BOT INFORMATION*
@@ -1001,7 +1000,6 @@ ikyy.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 ┏━━⬣👤 YOUR INFORMATION
 ┃⬡ Username: *${pushname}*
 ┃⬡ Sender : *@${sender.split('@')[0]}*
-┃⬡ Bio Info : *${thu.status}*
 ┗⬣
 
 Flw: instagram.com/achyrr_wann/
