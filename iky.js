@@ -75,7 +75,9 @@ let setting = JSON.parse(fs.readFileSync('./setting.json'))
 
 owner = setting.owner
 gamewaktu = setting.gamewaktu
-faketoko = "KENZYBOTZ"
+ppbot = setting.ppbot
+qris = setting.qris
+faketoko = "WANNBOTZ"
 
 // Database
 const setiker = JSON.parse(fs.readFileSync('./src/stik.json'))
@@ -277,7 +279,7 @@ const verif = (teks) => {
 key:{
           fromMe:false, 
 participant: `0@s.whatsapp.net`, ...(from ? { 
-remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "RIFQI BOTZ", 'jpegThumbnail': fs.readFileSync(`media/odc.jpeg`)}}}})
+remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "WANN STORE", 'jpegThumbnail': fs.readFileSync(`media/odc.jpeg`)}}}})
 
 }
         
@@ -292,12 +294,20 @@ remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "ht
         
 
 
-let ikyads = await getBuffer(`https://telegra.ph/file/4e819af4e326d36c1ff60.jpg`)
-fakelink = (tekslink) => { 
-	return {"externalAdReply": { "title": tekslink, "thumbnail": ikyads, "sourceUrl": "https://wa.me/qr/UCVMNO2VLMDBK1" }}
-}
+let ikyads = await getBuffer(`${ppbot}`)
+
+fakeYT = (tekslink) => { 
+
+  return {"externalAdReply: { title: `Hallo ${pushname}, ${ucapanWaktu}!`, mediaType: 2, thumbnailUrl:`https://i.postimg.cc/J490ggXq/Menu.jpg`, mediaUrl:`https://youtu.be/KtFi7u-i6y0`}}
 
 
+ function autoinfo() {
+        ikyy.setStatus(`${moment.tz('Asia/Jakarta').format('HH:mm:ss')} WIB`)
+        setTimeout( () => {
+        autoinfo()
+        }, 5000)
+        }
+        
         let d = new Date
        let locale = 'id'
        let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
@@ -319,15 +329,6 @@ fakelink = (tekslink) => {
         options
       );
     };
-        
-        
-        let fakeLink = {
-             "title": `Hai Kak ${pushname}`,
-             "body": `${timuu}`,
-             "previewType": "VIDIO",
-             "thumbnail": fs.readFileSync(`media/Menu.jpg`),
-             "mediaUrl": "https://youtu.be/7BqlUxaWXKs"
-        }        
         
         // here button function
         selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : ''
@@ -928,11 +929,6 @@ ikyy.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
                  
   
-  
-  
-  
-  
-  
       case 'menu':
               groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
               privat = ikyy.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
@@ -944,89 +940,87 @@ ikyy.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
               latensie = speed() - timestampe
               total = math(`${groups.length}*${privat.length}`)
               
-        menu =`*[ _K e n z y B o t z_ ]*
-        
-${ucapanWaktu} Kak ${pushname}👋`
-        
-wibu = `
-┌❏ *INDONESIA TIME*
-${petik}│◦➛ WIB : ${timuu}
-│◦➛ WITA : ${wita}
-└❏ WIT : ${wit}${petik}
-                          
-┌❏ *TODAY*
-${petik}│◦➛${ucapanWaktu}
-│◦➛Jam : ${timuu}
-└❏ Tanggal : ${date}${petik}
+        menu =`╭──̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇──╮
+      🍂ꦿꦼ͜͡𖦞W a n n S t o r e ᬊ͜͡🍂
+                ❛ welco᷍me ❜
+                   ︶͝︶͝︶͝︶
+             W a n n B o t z  11.0
+                   . . . . ︿᷼︿᷼︿᷼︿ . . . .
+◯֗┈───̇─̇─̇────̇─̇─̇───┈֗◯
+     _https://instabio.cc/wannstore_
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐠𝐫𝐨𝐮𝐩𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐰𝐢𝐛𝐮𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐨𝐰𝐧𝐞𝐫𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐠𝐚𝐦𝐞𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁ꪆꦿꦼ͜͡✎͘͜#𝐟𝐮𝐧𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐢𝐧𝐟𝐨𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐨𝐭𝐡𝐞𝐫𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐬𝐞𝐰𝐚𝐛𝐨𝐭
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐬𝐨𝐮𝐧𝐝𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐢𝐬𝐥𝐚𝐦𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐫𝐚𝐧𝐝𝐨𝐦𝐭𝐞𝐱𝐭
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐦𝐨𝐯𝐢𝐞𝐦𝐞𝐧𝐮
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#r𝐚𝐧𝐝𝐨𝐦𝐢𝐦𝐚𝐠𝐞
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐞𝐩𝐡𝐨𝐭𝐨
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐭𝐞𝐱𝐭𝐩𝐫𝐨
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐈𝐦𝐚𝐠𝐞𝐦𝐚𝐧𝐢
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜#𝐍𝐬𝐟𝐰𝐚𝐧𝐢𝐦𝐞
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+                  . . . . ︿᷼︿᷼︿᷼︿ . . . .
+◯֗┈───̇─̇─̇────̇─̇─̇───┈֗◯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┅┄╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜=> Im ${botName}
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┅┄╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜=> My Owner ${ownerName}
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+╭╭┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┅┄╮
+│├🍁꫶ꪆꦿꦼ͜͡✎͘͜=> Ig : @achyrr_wann
+╰╰┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅┄┅╯
+    ╰─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇──╯
 
-┌❏ *DEVICE*
-${petik}│◦➛Whatsapp : ${wa_version}
-│◦➛Merk HP : ${device_manufacturer}
-│◦➛Versi HP : ${device_model}
-│◦➛Versi OS : ${os_version}
-│◦➛RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│◦➛MCC : ${mcc}
-└❏ MNC : ${mnc}${petik}
-
-┌─❑「 *BOT INFO* 」
-${petik}│◦➛ Owner : ${ownerName}
-│◦➛Group Chats : ${groups.length}
-│◦➛𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
-│◦➛𝐁𝐚𝐭𝐞𝐫𝐚𝐢 : ${baterai}% ${charger}
-│◦➛𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
-│◦➛𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
-│◦➛▢ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${os.platform()}
-└❏ ${petik}
-
-
- 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-
-┏━▹ 𝐠𝐫𝐨𝐮𝐩𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐰𝐢𝐛𝐮𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐨𝐰𝐧𝐞𝐫𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐠𝐚𝐦𝐞𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐟𝐮𝐧𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐢𝐧𝐟𝐨𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐨𝐭𝐡𝐞𝐫𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐬𝐞𝐰𝐚𝐛𝐨𝐭
-
-┏━▹ *soundmenu*
-┃
-┗━▹ 𝐢𝐬𝐥𝐚𝐦𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐫𝐚𝐧𝐝𝐨𝐦𝐭𝐞𝐱𝐭
-┃
-┗━▹ 𝐦𝐨𝐯𝐢𝐞𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐫𝐚𝐧𝐝𝐨𝐦𝐢𝐦𝐚𝐠𝐞
-┃
-┗━▹ 𝐞𝐩𝐡𝐨𝐭𝐨
-
-┏━▹ 𝐩𝐡𝐨𝐭𝐨𝐤𝐲
-┃
-┗━▹ 𝐭𝐞𝐱𝐭𝐩𝐫𝐨
-
-┏━▹ 𝐈𝐦𝐚𝐠𝐞𝐦𝐚𝐧𝐢
-┃
-┗━▹ 𝐍𝐬𝐟𝐰𝐚𝐧𝐢𝐦𝐞
-
-
-
-
-© ›› R i f q i B o t z 
+© ›› R a f i B o t z  
 `
-                    ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'LIST MENU' }, type: 1 },{ buttonId: `!sewabot`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 },{ buttonId: `!owner`, buttonText: { displayText: '👥 OWNER' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+                    ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `ping : ${latensie.toFixed(4)} Sec \n Runtime  :  ${runtime(process.uptime())}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'LIST MENU' }, type: 1 },{ buttonId: `!sewabot`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 },{ buttonId: `!owner`, buttonText: { displayText: '👥 OWNER' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
 
 
@@ -1160,7 +1154,7 @@ ${petik}│◦➛ Owner : ${ownerName}
                case 'groupmenu':
         case 'menugroup':
                 
-               menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+               menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1185,7 +1179,7 @@ wibu = `┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ʜɪᴅᴇᴛᴀɢ *ᴛᴇᴋꜱ/ʀᴇᴘʟʏ ᴛᴇᴋꜱ*
 ┗⬡
 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1194,7 +1188,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'moviemenu':
               
         
-               menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+               menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1208,7 +1202,7 @@ wibu = `┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹ ${prefix}ceritahoror
 ┗⬡
 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1217,7 +1211,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'random':
               
         
-           menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+           menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1234,7 +1228,7 @@ wibu = `┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹ ${prefix}randomnama
 ┗⬡
 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1243,7 +1237,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'ownermenu':
         case  'menuowner':
                             
-       menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+       menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1272,7 +1266,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}premium add @tag|nomor
 ┃▹  ${prefix}premium del @tag|nomor
 ┗⬡
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1280,7 +1274,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         
        case 'wibumenu':
         case  'menuwibu':
- menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+ menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1314,7 +1308,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}nekopoicosplay
 ┃▹  ${prefix}nekopoisearch
 ┗⬡
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1322,7 +1316,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
 
        case 'soundmenu':
         case  'menusound':
-                       menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+                       menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1352,7 +1346,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}Sound22
 ┃▹  ${prefix}Sound23
 ┗⬡
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1361,7 +1355,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         
        case 'downloadmenu':
         case  'menudownload':
-                       menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+                       menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1382,7 +1376,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}mediafire 
 ┃▹  ${prefix}nhentaipdf *code*
 ┗⬡ 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1400,7 +1394,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
               latensie = speed() - timestampe
               total = math(`${groups.length}*${privat.length}`)
               
-       menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+       menu =`W a n nＢｏｔｚ ぽ 以
                
 ${ucapanWaktu} Kak ${pushname}`               
 
@@ -1421,7 +1415,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}img2url *reply foto*
 ┃▹  ${prefix}ytsearch *query*
 ┗⬡
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1429,7 +1423,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
    
    case 'gamemenu':
         case  'menugame':
-                       menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+                       menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏⬡ 𝐋𝐈𝐒?? 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}slot
@@ -1453,7 +1447,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒?? 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}tebakbendera
 ┃▹  ${prefix}suit *batu/kertas/gunting*
 ┗⬡
- © ›› R i f q i B o t z
+ © ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1471,7 +1465,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
               total = math(`${groups.length}*${privat.length}`)
               
       
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}dadu
@@ -1490,7 +1484,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}tovideo *reply sgif*
 ┃▹  ${prefix}amongus *teks*
 ┗⬡ 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1508,7 +1502,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
               total = math(`${groups.length}*${privat.length}`)
               
       
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}mining
@@ -1532,7 +1526,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}cekganteng
 ┃▹  ${prefix}cekcantik
 ┗⬡ 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
                ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
@@ -1551,7 +1545,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
               total = math(`${groups.length}*${privat.length}`)
               
       
- menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+ menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}update
@@ -1572,7 +1566,7 @@ wibu = `┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ${prefix}sourcecode
 ┃▹  ${prefix}bugreport *keluhan*
 ┗⬡ 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
  `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1591,7 +1585,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
               total = math(`${groups.length}*${privat.length}`)
               
       
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏⬡ ??𝐈𝐒𝐓 𝐌𝐄𝐍??
 ┃▹  ${prefix}listsurah
@@ -1601,7 +1595,7 @@ wibu = `┏⬡ ??𝐈𝐒𝐓 𝐌𝐄𝐍??
 ┃▹  ${prefix}kisahnabi
 ┃▹  ${prefix}jadwalsholat
 ┗⬡
- © ›› R i f q i B o t z
+ © ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1609,7 +1603,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
                    case 'ephoto':
 case 'ephotomenu':
  
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏━▹MENU
 ┃▹ wetglass text
@@ -1643,7 +1637,7 @@ wibu = `┏━▹MENU
 ┃▹ silverplaybutton text
 ┃▹ freefire text
 ┗━▹
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1652,7 +1646,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'wibu2':
 case 'nsfwanime':
  
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏━▹ MENU
 ┃▹ chiisaihentai
@@ -1675,7 +1669,7 @@ wibu = `┏━▹ MENU
 ┃▹ animebellybutton
 ┃▹ hentai4everyone
 ┗━▹
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1683,7 +1677,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'randomimage':
 case 'randomimage':
 
- menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+ menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏━▹ MENU
 ┃▹ bj
@@ -1733,7 +1727,7 @@ wibu = `┏━▹ MENU
 ┃▹ nsfw_neko_gif
 ┃▹ random_hentai_gif
 ┗━▹
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1742,7 +1736,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
         case 'photoxy':
 case 'photooky':
 
- menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+ menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏━▹ MENU
 ┃▹ shadow text
@@ -1774,13 +1768,13 @@ wibu = `┏━▹ MENU
 ┃▹ battlefield4 text1 text2
 ┃▹ pubg text1 text2
 ┗━▹
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
 case 'textpro':    
-menu =`K e  n z y　Ｂｏｔｚ ぽ 以
+menu =`W a n nＢｏｔｚ ぽ 以
  ${ucapanWaktu} Kak ${pushname}`
 wibu = `┏━▹「 Text Pro Me 」
 ┃▹ ${prefix}blackpink text
@@ -1826,7 +1820,7 @@ wibu = `┏━▹「 Text Pro Me 」
 ┃▹ ${prefix}steel3d text1 text2
 ┃▹ ${prefix}wallgravity text1 text2
 ┗━▹ 
-© ›› R i f q i B o t z
+© ›› W a n n  Ｂｏｔｚ
 `
 
 ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `!command`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 },{ buttonId: `!iklan`, buttonText: { displayText: '🏷️ SEWA BOT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
@@ -1834,7 +1828,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
    case 'command':
                list = []
                listmenu = [`groupmenu`,`photoxy`,`ephoto`,`randomimage`,`wibu2`,`storymenu`,`soundmenu`,`randomtext`,`islammenu`,`wibumenu`,`stickermenu`,`ownermenu`,`gamemenu`,`funmenu`,`downloadmenu`,`infomenu`,`othermenu`,`owner`,`gc`,`sewabot`]
-               listmenuu = [`Menu Group`,`Photo Oky`,`Ephoto Menu`,`Random Image`,`Nsfw Anime`,`Movie&Story`,`Sound Menu`,`RandomText`,`Islam Menu`,`Wibu Menu`,`Sticker Menu`,`Owner Command`,`Game Menu`,`For Fun Menu`,`Downloader`,`Info Menu`,`Menu Lainnya`,`OwnerBot`,`Group RIFQI BOTZ🇮🇩`,`Rent this Bot`]
+               listmenuu = [`Menu Group`,`Photo Oky`,`Ephoto Menu`,`Random Image`,`Nsfw Anime`,`Movie&Story`,`Sound Menu`,`RandomText`,`Islam Menu`,`Wibu Menu`,`Sticker Menu`,`Owner Command`,`Game Menu`,`For Fun Menu`,`Downloader`,`Info Menu`,`Menu Lainnya`,`OwnerBot`,`Website Owner🇮🇩`,`Rent this Bot`]
                nombor = 1
                startnum = 0
                for (let x of listmenu) {
@@ -1849,7 +1843,7 @@ ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons:
                    }
                         list.push(yy)
            }
-               listmsg(from, `K e n z y　Ｂｏｔｚ ぽ `,`  `, list)
+               listmsg(from, `W a n n Ｂｏｔｚ ぽ `,`  `, list)
                break
    
    
@@ -2618,38 +2612,38 @@ ikyy.sendMessage(from, await getBuffer(gopeynya), image, {quoted: mek, caption: 
 break
 
 
-case 'iklan':
-      gopeynya = 'https://telegra.ph/file/8aa0643bc8b0601cd6392.jpg'
-     teksnya = `
-╭──「🇸 🇪 🇼 🇦  🇧 🇴 🇹 」
-│❏  1 MINGGU : IDR 4.000 (4K)
-│❏  1 BULAN : IDR 6.000 (6K)
-│❏   PERMANEN : IDR10.000 (10K)
-╰────
-╭─ [ KELEBIHAN BOT ]
-│❏  ＯＮ 24 ＪＡＭ
-│❏  WELCOME IMAGE
-│❏  FITUR LANGKA
-╰────
-╭─[ KEUNTUNGAN ]
-│❏  ANTI LINK ( AUTO KICK )
-│❏  WELCOME ( OTOMATIS )
-│❏  DAN RATUSAN FITUR LAINYA
-╰────
-╭─[ *MINAT CHAT* ]
-│❏  🪀 wa.me/6289636634511?text=sewa+bot
-╰────
-╭─[ *TES BOT? MASUK GRUB DI BAWAH* ]
-│❏https://chat.whatsapp.com/Hnb8UOsuN4t5hSEMNTUdft
-╰────
-╭─[ *PAYMENT* ]
-│❏  GOPAY
-│❏  DANA
-│❏  PULSA +10K
-│❏  QRIS ALL PAYMENT
-╰────`
+case 'listdmff':
+      gopeynya = '${ppbot}'
+     txtt = `
+┏━━⬣ VIA ID
+┃20 💎  2.900
+┃50 💎 7.000
+┃70 💎 10.000
+┃100💎 13.800
+┃140💎18.900
+┃210💎28.900
+┃355💎 47.000
+┃500💎66.500
+┃720💎93.500
+┗━━⬣
 
-              ikyy.sendMessage(from, await getBuffer(gopeynya), image, {quoted: mek, caption: teksnya })
+┏━━⬣ VILOG
+┃200💎:23.500
+┃310💎:34.500
+┃410💎:44.200
+┃520💎:56.500
+┃620💎:68.000
+┃720💎:77.500
+┃830💎:89.000
+┗━━⬣
+
+┏━━⬣ MEMBERSHIP VIA ID
+┃⬡ MM 27.500
+┃⬡ MB 138.580
+┗━━⬣
+`
+buff = `Silahkan Pilih dan Hubungi Onwer Untuk Pembayaran`
+              ikyy.sendMessage(from, await getBuffer(gopeynya), image,  contentText: `${txtt}`, footerText: `${buff}`, buttons: [{ buttonId: `!owner`, buttonText: { displayText: 'OWNER' }, type: 1 },{ buttonId: `!payment`, buttonText: { displayText: 'PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
 //------------------< Sticker Cmd >-------------------
        case 'addcmd': 
@@ -2681,6 +2675,83 @@ case 'iklan':
 }
               mentions(teksnyee, cemde, true)
               break
+              case 'scan':
+
+list = await ikyy.prepareMessageFromContent(from, {
+
+  "listMessage": {
+
+ "title": "🛒 INFO BUSINIS ",
+
+ "description": "LIST PRODUCT CLICK DI SINI ",
+
+ "buttonText": "",
+
+ "listType": "PRODUCT_LIST",
+
+ "productListInfo": {
+
+"productSections": [
+
+{
+
+  "title": "LIST HARGA",
+
+  "products": [
+
+    {
+
+ "productId": "4384164685029627"
+
+  },
+
+  {
+
+"productId": "4514395141953296"
+
+ },
+
+ {
+
+"productId": "4514395141953296"
+
+ },
+  {
+
+"productId": "6596446863706523"
+
+ },
+ ]
+
+  }
+
+  ],
+
+  "headerImage": {
+
+"productId": "4384164685029627",
+
+"productId": "4514395141953296",
+
+"productId": "4514395141953296",
+"productId": "6596446863706523",
+"jpegThumbnail": fakeimage
+
+ },
+
+ "businessOwnerJid": sender
+
+  },
+
+  "footerText": "\nPowered follow @achyrr_wann. "
+
+}
+
+}, {quoted:kyy})
+
+ikyy.relayWAMessage(list, {waitForAck: true})
+
+break
 //------------------< Downloader/Search/Anime >-------------------
        
        case 'igdl': 
@@ -3608,32 +3679,51 @@ WAKTU        : ${time2}
 				
 				
 				case 'sewabot':
-              gopeynya = `Halo Kak ${pushname} Berikut List Sewa Bot by RIFQII STORE 
+              gopeynya = `${qris}`
+txtt = `Halo Kak ${pushname} Berikut List Sewa Bot by WANN STORE 
   
-┏━━⬣ PRICE LIST 1
-┃⬡ SEWA 4K/MINGGU
-┃⬡ SEWA 6K/BLN
-┃⬡ PERMANEN 10K
-┗━━⬣
+  ┏━━⬣ PRICE LIST 1
 
-┏━━⬣ PRICE LIST 2
-┃⬡ JOIN MURID BOT 15K
-┃⬡ JADI BOT + OWNER 30K
-┗━━⬣
+  ┃⬡ SEWA 4K/MINGGU
 
-┏━━⬣ MINAT? PM
-┃⬡ wa.me/6289636634511
-┃⬡ Yt RIFQI BOTZ
-┗━━⬣
+  ┃⬡ SEWA 10K PERMANENT
+
+  ┃⬡ PERNAMENT + PREMIUM 15K
+
+  ┗━━⬣
+
+
+
+  ┏━━⬣ PRICE LIST 2
+
+  ┃⬡ JADI BOT 10K GA FULL RECODE
+
+  ┃⬡ JADI BOT + OWNER 30K ( 97% RECODE )
+
+  ┃⬡ SC BOT TANYA OWNER
+
+  ┗━━⬣
+
+
+
+  ┏━━⬣ MINAT? PM
+
+  ┃⬡ wa.me/6285640068416
+
+  ┃⬡ Ig @achyrr_wann
+
+  ┃⬡ https://instabio.cc/wannstore
+
+  ┗━━⬣
 `
 buff = `${week} ${date}
 ${timuu} WIB`
-  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{ buttonId: `!owner`, buttonText: { displayText: 'OWNER' }, type: 1 },{ buttonId: `!payment`, buttonText: { displayText: 'PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+  ikyy.sendMessage(from, await getBuffer(gopeynya), image,{ contentText: `${txtt}`, footerText: `${buff}`, buttons: [{ buttonId: `!owner`, buttonText: { displayText: 'OWNER' }, type: 1 },{ buttonId: `!payment`, buttonText: { displayText: 'PAYMENT' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
               break
        case 'gopay':
        
        
-              gopeynya = 'https://telegra.ph/file/a50622d472ab98ee5dcc9.jpg'
+              gopeynya = 'https://telegra.ph/file/9813951fe94db331b507c.jpg'
      teksnya = `
 ${ucapanWaktu} Kak ${pushname}
 
@@ -3645,7 +3735,7 @@ ${ucapanWaktu} Kak ${pushname}
 PAYMENT GOPAY
 
 QR CODE : SCAN FOTO DI ATAS
-AN: RIFQII STORE
+AN: WANNOFFICIAL03
 
 BAYAR SESUAI HARGA YA KAK`
 
@@ -3653,7 +3743,7 @@ BAYAR SESUAI HARGA YA KAK`
               break
 case 'pulsa':
        
-gopeynya = 'https://telegra.ph/file/8aa0643bc8b0601cd6392.jpg'
+gopeynya = 'https://telegra.ph/file/9813951fe94db331b507c.jpg'
      teksnya = `
 ${ucapanWaktu} Kak ${pushname}
 
@@ -3664,7 +3754,7 @@ ${ucapanWaktu} Kak ${pushname}
 
 PAYMENT PULSA
 
-NOMOR : 085643112659
+NOMOR : 085640068416
 KARTU : INDOSAT
 
 BAYAR SESUAI HARGA YA KAK`
@@ -3672,30 +3762,101 @@ BAYAR SESUAI HARGA YA KAK`
               ikyy.sendMessage(from, await getBuffer(gopeynya), image, {quoted: mek, caption: teksnya })
               break
                          
-      case 'payment':
-               list = []
-               listmenu = [`gopay`,`dana`,`pulsa`,`qris`]
-               listmenuu = [`BAYAR VIA GOPAY`,`BAYAR VIA DANA`,`BAYAR VIA PULSA`,`BAYAR VIA QRIS`,]
-               nombor = 1
-               startnum = 0
-               for (let x of listmenu) {
-               const yy = {title: 'payment ke' + nombor++,
-    rows: [
-       {
-        title: `${listmenuu[startnum++]}`,
-        description: ``,
-        rowId: `${prefix}${x}`
-      }
-    ]
-   }
-        list.push(yy)
-           }
-               listmsg(from, `hai kak ${pushname} \n\nSilahkan pilih metode pembayaran di bawah ya !`,`  `, list)
-               break
+       case 'payment':
+              gopeynya =  `
+BERIKUT INI ADALAH LIST PEMBAYARAN KAMI
+┏━━⬣ VIA ID
+┃💸GOPAY
+┃💸DANA
+┃BELUM PREMIUM? ADA QRIS ALL PAY
+┗━━⬣
+`
+buff = `${week} ${date}
+${timuu} WIB`
+  ikyy.sendMessage(from, { contentText: `${gopeynya}`, footerText: `${buff}`, buttons: [{buttonId: "!gopay", buttonText: { displayText: 'BAYAR DENGAN GOPAY' }, type: 1 },{buttonId: "!dana", buttonText: { displayText: 'BAYAR DENGAN DANA' }, type: 1 }, {buttonId: "!qris",buttonText: { displayText: 'QRIS ALL PAYMENT' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+
+
+case 'inibug':
+
+list = await ikyy.prepareMessageFromContent(from, {
+
+  "listMessage": {
+
+ "title": "PAYMENT",
+
+ "description": "CLICK",
+
+ "buttonText": "",
+
+ "listType": "PRODUCT_LIST",
+
+ "productListInfo": {
+
+"productSections": [
+
+{
+
+  "title": "LIST CATALOG",
+
+  "products": [
+
+  {
+
+ "productId": "4384164685029627"
+
+  },
+
+  {
+
+"productId": "4514395141953296"
+
+ },
+
+ {
+
+"productId": "3830565277044274"
+
+ },
+   {
+
+"productId": "6596446863706523"
+
+ },
+ ]
+
+  }
+
+  ],
+
+  "headerImage": {
+
+"productId": "4384164685029627",
+
+"jpegThumbnail": fakeimage
+
+ },
+
+ "businessOwnerJid": sender
+
+  },
+
+  "footerText": "MINAT? PC OWNER"
+
+}
+
+}, {quoted: freply})
+
+ikyy.relayWAMessage(list, {waitForAck: true})
+
+
+
+
+
+break
                
 case 'dana':
 
-              gopeynya = 'https://telegra.ph/file/f5a9b6bc6aada7dd5a5e4.jpg'
+              gopeynya = 'https://telegra.ph/file/9813951fe94db331b507c.jpg'
      teksnya = `
 ${ucapanWaktu} Kak ${pushname}
 
@@ -3706,9 +3867,9 @@ ${ucapanWaktu} Kak ${pushname}
 
 PAYMENT DANA
 
-NOMOR : 088238487765
+NOMOR : 085640068416
 QR CODE : SCAN FOTO DI ATAS
-AN: ZAMRONI
+AN: RIDWAN AR
 
 BAYAR SESUAI HARGA YA KAK `
 
@@ -3717,7 +3878,7 @@ BAYAR SESUAI HARGA YA KAK `
 	    case 'qris':
 	
 	
-	gopeynya = 'https://telegra.ph/file/6481d81101c85a40a98e5.jpg'
+	gopeynya = 'https://telegra.ph/file/9813951fe94db331b507c.jpg'
      teksnya = `
 ${ucapanWaktu} Kak ${pushname}
 
@@ -3729,7 +3890,7 @@ ${ucapanWaktu} Kak ${pushname}
 PAYMENT QRIS
 
 QR CODE : SCAN FOTO DI ATAS
-AN: RIFQII STORE
+AN: WANNOFFICIAL03
 
 BAYAR SESUAI HARGA YA KAK`
 
@@ -4038,8 +4199,8 @@ case 'chiisaihentai':
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=IkyOgiwara`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
        
@@ -4087,11 +4248,11 @@ case 'chiisaihentai':
                 case 'kemonomimi':
                 case 'nsfw_avatar':
                 reply (mess.wait)
-               buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=ZUFAR`)
+               buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=PunyaIkyAds`)
                 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
         
@@ -4103,16 +4264,16 @@ case 'ppcouple':
 
 anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/ppcouple?apikey=IkyOgiwara`)
 						buff1 = await getBuffer(anu.result.male)
-						buttons = [{buttonId: `!infoig`,buttonText:{displayText: `Follow @Rifqi_nation_87`},type:1}]
+						buttons = [{buttonId: `!infoig`,buttonText:{displayText: `Follow @achyrr_wann`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff1, "imageMessage", { thumbnail: buff1, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
               contentText:`Cowo`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
             buff2 = await getBuffer(anu.result.female)
-              buttons = [{buttonId: `!infoig`,buttonText:{displayText: `Follow @Rifqi_nation_87`},type:1}]
+              buttons = [{buttonId: `!infoig`,buttonText:{displayText: `Follow @achyrr_wann`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff2, "imageMessage", { thumbnail: buff2, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
               contentText:`Cewe`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
              setTimeout( async () => {
@@ -4127,7 +4288,7 @@ case 'memek':
 
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `NEXT`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
@@ -4169,11 +4330,11 @@ break
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=ZUFAR&text=${ini_txt}`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=PunyaIkyAds&text=${ini_txt}`)
                  buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
         
@@ -4192,11 +4353,11 @@ break
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     txt1 = args[0]
                     txt2 = args[1]
-                 buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=ZUFAR&text1=${txt1}&text2=${txt2}`)
+                 buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=PunyaIkyAds&text1=${txt1}&text2=${txt2}`)
                           buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
         
@@ -4230,11 +4391,11 @@ break
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=ZUFAR&text=${ini_txt}`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=PunyaIkyAds&text=${ini_txt}`)
                           buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
         
@@ -4247,11 +4408,11 @@ break
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     txt1 = args[0]
                     txt2 = args[1]
-                buff = await getBuffer(`https://api.lolhuman.xyz/api/photooxy2/${command}?apikey=ZUFAR&text1=${txt1}&text2=${txt2}`)
+                buff = await getBuffer(`https://api.lolhuman.xyz/api/photooxy2/${command}?apikey=PunyaIkyAds&text1=${txt1}&text2=${txt2}`)
                           buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
         
@@ -4291,11 +4452,11 @@ break
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
-             buff = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=ZUFAR&text=${ini_txt}`)
+             buff = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=PunyaIkyAds&text=${ini_txt}`)
                buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
           case 'wasted':
@@ -4312,10 +4473,10 @@ break
 					break
 					case 'tahta':
 					buff = await getBuffer(`https://leyscoders-api.herokuapp.com/api/harta-tahta?text=${q}&apikey=IkyOgiwara`)
-		      buttons = [{buttonId: `!infoig`,buttonText:{displayText: ` Follow @Rifqi_nation_87`},type:1}]
+		      buttons = [{buttonId: `!infoig`,buttonText:{displayText: ` Follow @achyrr_wann`},type:1}]
               imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'crated by RIFQI BOTZ', imageMessage: imageMsg,
-              contentText:`Follow @Rifqi_nation_87`,buttons,headerType:4}
+              buttonsMessage = {footerText:'crated by WANN STORE', imageMessage: imageMsg,
+              contentText:`Follow @achyrr_wann`,buttons,headerType:4}
               prep = await ikyy.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               ikyy.relayWAMessage(prep)
 break
@@ -4869,8 +5030,8 @@ break
 }
                break
 //------------------< Ingfo Bot >-------------------
-             case 'runtime':
-             reply(`_*BOT TELAH AKTIF SELAMA*_\n${runtime(process.uptime())}`)^M
+      case 'runtime':
+              textImg(`${runtime(process.uptime())}`)
               break
        case 'donate': 
        case 'donasi':
@@ -4879,7 +5040,7 @@ break
        case 'sourcecode': 
        case 'sc': 
        case 'src':
-              textImg(`sc: yt RIFQI BOTZ`)
+              textImg(`sc: https://instabio.cc/wannstore`)
               break
       case 'ping':
       case 'speed':
@@ -4970,42 +5131,21 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
       case 'getquoted':
              reply(JSON.stringify(mek.message.extendedTextMessage.contextInfo, null, 3))
              break
-             
-             case 'bc':
-if (!isOwner) return  reply(mess.only.owner)
-  if (args.length < 1) return reply('teks?')
- anu = await ikyy.chats.all()
-  if (isMedia && !kyy.message.videoMessage || isQuotedImage) {
- const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(kyy).replace('quotedM','m')).message.extendedTextMessage.contextInfo : kyy
- bc = await ikyy.downloadMediaMessage(encmedia)
- for (let _ of anu) {
-ikyy.sendMessage(_.jid, bc, image, {quoted:freply,caption: `*「 BROADCAST BOT 」*\n\n${body.slice(4)}`})
- }
- reply('Suksess broadcast')
-  } else {
- for (let _ of anu) {
-sendMess(_.jid, `\n\n${body.slice(4)}`)
- }
- reply('Suksess broadcast')
-  }
-  break
-             
-             
-      case 'bc2':
+      case 'bc':
+      case 'broadcast':
+             if (!isOwner) return  reply(mess.only.owner)
              if (args.length < 1) return reply('teks?')
              anu = await ikyy.chats.all()
-             if (isMedia && !kyy.message.videoMessage || isQuotedImage) {
-             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(kyy).replace('quotedM','m')).message.extendedTextMessage.contextInfo : kyy
+             if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
              bc = await ikyy.downloadMediaMessage(encmedia)
              for (let _ of anu) {
-             	tes = `${body.slice(4)}`
-             	ikyy.sendMessage(_.jid, bc, { contentText: `${tes}`, footerText: `jangan lupa subs yt RIFQI BOTZ`, buttons: [{buttonId: `${prefix}.`,buttonText:{displayText: 'OKE BANG'},type:1}],headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: image, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+             ikyy.sendMessage(_.jid, bc, image, {quoted:freply,caption: `*「 BROADCAST BOT 」*\n\n${body.slice(4)}`})
 }
              reply('Suksess broadcast')
              } else {
              for (let _ of anu) {
-             	textt = `${body.slice(4)}`
-             ikyy.sendMessage(_.jid, { contentText: `${textt}`, footerText: `jangan lupa subs yt RIFQI BOTZ`, buttons: [{buttonId: `${prefix}.`,buttonText:{displayText: 'OKE BANG'},type:1}],headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+             sendMess(_.jid, `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`)
 }
              reply('Suksess broadcast')
 }
@@ -5064,37 +5204,23 @@ sendMess(_.jid, `\n\n${body.slice(4)}`)
              break
 //------------------< G R U P >-------------------
 
-
-         case 'linkgc':
-         case 'linkgrup':
-         case 'linkgroup':
-         case 'linkgrub':
-         linkgc = await ikyy.groupInviteCode(from)
-					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink grup ${groupName}`
-					ikyy.sendMessage(from, yeh, text, { quoted: mek })
-					break
-					
-					
-					case 'resetlinkgc':
-         case 'resetlinkgroup':
-         case 'revoke':
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
-                   if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-          json = ['action', 'inviteReset', from]
-         ikyy.query({json, expect200: true})
-          reply('Sukses Mereset Link Group')
-         break
-
          case 'kick':
-         reply('maaf kak fitur kick di hapus oleh owner karena rawan ke ban')
-         break
-         
-         case 'add':
-         reply('maaf kak  fitur add di hapus oleh owner karena rawan ke ban')
-         break
-
-
+             if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+          
+             if (!isGroup) return reply(mess.only.group)
+             kick(from, mentionUser)
+             break
+      case 'add':
+             if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
+             entah = arg.split("|")[0]
+             entah = entah.replace(new RegExp("[()+-/ +/]", "gi"), "")
+             entah = `${entah}@s.whatsapp.net`
+             ikyy.groupAdd(from, [entah])
+             } else {
+             entah = mek.message.extendedTextMessage.contextInfo.participant
+             ikyy.groupAdd(from, [entah])
+}
+             break
              
       case 'promote':
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
@@ -5470,11 +5596,11 @@ sendMess(_.jid, `\n\n${body.slice(4)}`)
                break
                
                case 'tes':
-        return sendButMessage(from, `*OKE NYALA OM*`, `ping  ${latensie.toFixed(4)} sec\nRuntime: ${runtime(process.uptime())}`, [
+        return sendButMessage(from, `*NYALA OM😁*`, `ping  ${latensie.toFixed(4)} sec\nRuntime: ${runtime(process.uptime())}`, [
             {
                "buttonId": ".menu",
                "buttonText": {
-                  "displayText": "MENU"
+                  "displayText": "BACK TO MENU"
                },
                "type": "RESPONSE"
             }
@@ -5494,7 +5620,7 @@ sendMess(_.jid, `\n\n${body.slice(4)}`)
 │
 ├ ALLAH SWT
 ├ Nino Chan
-├ ikyy Bot
+├ Xinz Bot
 ├ Manurius
 ├ Arif
 ├ Fathur
@@ -5706,13 +5832,13 @@ case 'caripesan':  //by ANU TEAM
              break
 //------------------< Menunya Bang:v >-------------------
       case 'don':
-             reply(`GOPAY=GAADA\n\nDANA=088238487765\n\nOVO=089636634511\n\nQRIS=https://j.top4top.io/p_2062m6av35.png`)
+             reply(`GOPAY=GAADA\n\nDANA=085640068416\n\nOVO=085640068416\n\nQRIS=https://telegra.ph/file/9813951fe94db331b507c.jpg`)
              break
       case 'infoig':
-             reply('https://chat.whatsapp.com/Hnb8UOsuN4t5hSEMNTUdft')
+             reply('https://instabio.cc/wannstore')
              break
       case 'gc':
-      reply('https://chat.whatsapp.com/Hnb8UOsuN4t5hSEMNTUdft')
+      reply('https://instabio.cc/wannstore')
       break
       
       
@@ -5983,6 +6109,5 @@ console.log('[',color('TEXT','teal'),']',`Pesan : ${budy} Dari`, color(pushname)
         }
 	}
 }
-
 
 
