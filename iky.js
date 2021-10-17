@@ -89,6 +89,7 @@ gamewaktu = setting.gamewaktu
 ppbot = setting.ppbot
 qris = setting.qris
 fakeyt = setting.fakeyt
+fake = setting.fake
 
 /** prefix option **/
 let multipref = true;
