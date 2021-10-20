@@ -24,6 +24,11 @@ baterai = 'unknown'
 
 charging = 'unknown'
 
+spc1 = '         '
+spc2 = '\n                           '
+spc3 = '                   '
+spc4 = '               '
+
 
 
 //nocache
@@ -48,20 +53,12 @@ const starts = async (ikyy = new WAConnection()) => {
 
 	ikyy.logger.level = 'warn'
 
-	console.log(color(figlet.textSync('MANUT GUSTI', {
-
-		font: 'Standard',
-
-		horizontalLayout: 'default',
-
-		vertivalLayout: 'default',
-
-		width: 80,
-
-		whitespaceBreak: false
-
-	}), 'cyan'))
-
+	console.log(color(`${spc4}< ================================================== >`, 'cyan'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Hai        : ${ucapanWaktu}`, 'blue'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Bot Version : 2.1.2`, 'blue'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Status      : Online!`, 'red'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : ${fakeyoi}`, 'red'))
+console.log(color(`${spc4}< ================================================== >`, 'cyan'))
 	console.log(color('[Wann Store]', 'cyan'), color('Owner is online now!', 'yellow'))
 
 	console.log(color('[Wann Store]', 'cyan'), color('Welcome back, Owner! Hope you are doing well~', 'yellow'))
