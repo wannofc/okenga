@@ -184,7 +184,7 @@ let errorImg = 'https://i.ibb.co/FBm52Pt/1e0fe6a08b67.jpg'
 
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 
-banChats = true;
+banChats = false;
 
 owner = setting.owner
 
@@ -13032,8 +13032,8 @@ asupan()
 break
 case 'public':
 		              if (!kyy.key.fromMe && !isOwner) return reply(lang.onlyOwner())
-		          	if (banChats === false) return
-		          	banChats = false
+		          	if (banChats === true) return
+		          	banChats = true
 		          	//fakeitem(`「 *PUBLIC-MODE* 」`)
 						sendButMessage(from, `「 *PUBLIC-MODE* 」`, `Click self to return to self mode`, [
             {
@@ -13046,8 +13046,8 @@ case 'public':
         break;
 			case 'self':
 			          if (!kyy.key.fromMe && !isOwner) return reply(lang.onlyOwner())
-		          	if (banChats === true) return
-		          	banChats = true
+		          	if (banChats ==  false) return
+		          	banChats = false
 		          	//fakeitem(`「 *SELF-MODE* 」`)
 		          	sendButMessage(from, `「 *SELF-MODE* 」`, `Click public to return to public mode`, [
             {
