@@ -54,10 +54,10 @@ const starts = async (ikyy = new WAConnection()) => {
 	ikyy.logger.level = 'warn'
 
 	console.log(color(`${spc4}< ================================================== >`, 'cyan'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Hai        : ${ucapanWaktu}`, 'blue'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Hai        : Saya InviBotz Dari Wann Ofc`, 'blue'))
 console.log(color(`${spc3}[•]`, 'aqua'), color(`Bot Version : 2.1.2`, 'blue'))
 console.log(color(`${spc3}[•]`, 'aqua'), color(`Status      : Online!`, 'red'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : ${fakeyoi}`, 'red'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : WannStore`, 'red'))
 console.log(color(`${spc4}< ================================================== >`, 'cyan'))
 	console.log(color('[Wann Store]', 'cyan'), color('Owner is online now!', 'yellow'))
 
