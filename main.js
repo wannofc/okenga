@@ -29,8 +29,6 @@ spc2 = '\n                           '
 spc3 = '                   '
 spc4 = '               '
 
-
-
 //nocache
 
 global.media = require('./src/json/media.json');
@@ -53,18 +51,27 @@ const starts = async (ikyy = new WAConnection()) => {
 
 	ikyy.logger.level = 'warn'
 
-	console.log(color(`${spc4}< ================================================== >`, 'cyan'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Hai        : Saya InviBotz Dari Wann Ofc`, 'blue'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Bot Version : 2.1.2`, 'blue'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Status      : Online!`, 'red'))
-console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : WannStore`, 'red'))
+	console.log(color(figlet.textSync(`${spc1}           INVIBOTZ  `, {
+font: 'Standard',
+horizontalLayout: 'default',
+vertivalLayout: 'default',
+width: 80,
+whitespaceBreak: false
+}), 'cyan'))
+console.log(color(`${spc2}[ • CREATOR BOT WANN OFFICIAL• ]` ,'cyan'))
 console.log(color(`${spc4}< ================================================== >`, 'cyan'))
-	console.log(color('[Wann Store]', 'cyan'), color('Owner is online now!', 'yellow'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Hai        : Pengguna InviBotz`, 'red'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Bot Version : 2.1.2`, 'red'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Status      : Online!`, 'white'))
+console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : WannBotz`, 'white'))
+console.log(color(`${spc4}< ================================================== >`, 'cyan'))
 
-	console.log(color('[Wann Store]', 'cyan'), color('Welcome back, Owner! Hope you are doing well~', 'yellow'))
-
-	ikyy.browserDescription = ["WANN - BOTZ", "Chrome", "3.0.0"];
-
+    console.log(color('⎇','red'), color('𝗦𝗰𝗿𝗶𝗽𝘁 𝗜𝗻𝗶 𝗚𝘄 𝗦𝘂𝘀𝘂𝗻 𝗦𝗲𝗻𝗱𝗶𝗿𝗶!\n𝗡𝗼𝘁𝗲: 𝗝𝗮𝗻𝗴𝗮𝗻 𝗟𝘂𝗽𝗮 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 Wann Botz シ︎', 'aqua'))
+    console.log(color('⎇','red'), color('𝗦𝗼𝘂𝗿𝗰𝗲 𝗖𝗼𝗱𝗲 𝗩𝗲𝗿𝘀𝗶𝗼𝗻:', 'aqua'))
+    console.log(color('⎇','red'), color('𝗕𝘂𝗴? 𝗘𝗿𝗿𝗼𝗿? 𝗦𝘂𝗴𝗴𝗲𝘀𝘁𝗶𝗼𝗻? 𝗩𝗶𝘀𝗶𝘁 𝗛𝗲𝗿𝗲:', 'aqua'), color('https://wa.me/6285640068416'))
+    console.log(color('[SELF-BOT]'), color('𝗦𝗲𝗹𝗳𝗯𝗼𝘁 Wann Botz 𝗜𝘀 𝗢𝗻𝗹𝗶𝗻𝗲 ㋛︎', 'aqua'))
+    console.log(color('[DEV]', 'cyan'), color('𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗕𝗮𝗰𝗸, 𝗢𝘄𝗻𝗲𝗿! 𝗛𝗼𝗽𝗲 𝗬𝗼𝘂 𝗔𝗿𝗲 𝗗𝗼𝗶𝗻𝗴 𝗪𝗲𝗹𝗹~', 'aqua'))
+    console.log(color('⎇','green'), color('𝗠𝗮𝗸𝗮𝘀𝗶𝗵 𝗗𝗵 𝗣𝗮𝗸𝗲', 'aqua'))
 
 
 	// Menunggu QR Muncul
